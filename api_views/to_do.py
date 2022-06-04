@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 
-from api_views.token import token_required
+from utils.token import token_required
 from utils.models import Todo, db
 
 to_do = Blueprint('to_do', __name__)

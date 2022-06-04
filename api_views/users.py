@@ -1,6 +1,6 @@
 from flask import jsonify, Blueprint, request
 
-from api_views.token import token_required
+from utils.token import token_required
 from utils.models import User, db
 
 user_data = Blueprint('user_data', __name__)
