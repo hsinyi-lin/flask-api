@@ -4,6 +4,7 @@ from flask import Flask
 from flask_migrate import Migrate
 
 from api_views.auth import auth
+from api_views.users import user_data
 from utils.models import db
 
 app = Flask(__name__)
@@ -16,6 +17,7 @@ db.init_app(app)
 migrate = Migrate(app, db)
 
 app.register_blueprint(auth)
+app.register_blueprint(user_data)
 
 
 if __name__ == "__main__":
