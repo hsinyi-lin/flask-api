@@ -16,4 +16,4 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(100))
     complete = db.Column(db.Boolean)
-    user_id = db.Column(db.Integer(), db.ForeignKey("user.uid"))
+    user_id = db.Column(db.String(30), db.ForeignKey("user.uid"))
